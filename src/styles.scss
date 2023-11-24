@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  user-select:none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+$color-primary:#232033;
+$color-secondary:#F0EFF7;
+
+$color-hover-program: rgba(109, 92, 216, 0.43);
+
+$font-family-primary: 'VT323', 'Montserrat', Helvetica, sans-serif;
+$font-family-secondary: 'Montserrat', Helvetica, sans-serif;
+$font-family-tertiary: 'Bungee Shade';
+$font-family-display: 'Noto Sans SC';
+
+$bg-default: linear-gradient(106.48deg, #FC89F0 1.33%, #898EFC 98.15%);
+$bg-container-primary:#B4B3BD;
+$bg-container-secondary: #9391A2;
+
+$z-index-window: 300;
+$z-index-grid: 20;
+$z-index-base-window: 10;
+
+$height-window-content: calc( 100% - 22px - 71px - 5px);
