@@ -1,0 +1,24 @@
+nav {
+  width: 100vw;
+  border-bottom: 1px solid var(--gray-800);
+  background: var(--gray-500);
+  padding: .35rem 0;
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+a{
+  transition: .15s linear;
+}
+a:hover {
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+}
