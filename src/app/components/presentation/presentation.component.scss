@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1{
+  font-size: 3.5rem;
+}
+
+h3{
+  font-size: 1.75rem;
+  color: var(--gray-700);
+  margin-bottom: 1.25rem;
+}
+p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+window {
+  align-self: flex-start;
+}
+
+.container-gif {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  max-width: 350px;
+  img {
+    width: 100%;
+  }
+}

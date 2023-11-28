@@ -1,5 +1,6 @@
 import { NgModule, LOCALE_ID} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import '@angular/common/locales/global/pt';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,7 +8,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ClockComponent } from './components/header/clock/clock.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import '@angular/common/locales/global/pt';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { PresentationComponent } from './components/presentation/presentation.component';
+import { WindowComponent } from './components/window/window.component';
+import { WindowHeaderComponent } from './components/window/window-header/window-header.component';
+import { WindowBodyComponent } from './components/window/window-body/window-body.component';
+import { IconClickableComponent } from './components/window/icon-clickable/icon-clickable.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +21,13 @@ import '@angular/common/locales/global/pt';
     HomeComponent,
     HeaderComponent,
     ClockComponent,
-    NavbarComponent
+    NavbarComponent,
+    PortfolioComponent,
+    PresentationComponent,
+    WindowComponent,
+    WindowHeaderComponent,
+    WindowBodyComponent,
+    IconClickableComponent
   ],
   imports: [
     BrowserModule,

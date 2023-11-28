@@ -1,0 +1,24 @@
+.content {
+  padding: .15rem .25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover{
+    background: var(--purple-200);
+  }
+}
+
+picture {
+  height: 4rem;
+  width: 4rem;
+  display: grid;
+  place-content: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

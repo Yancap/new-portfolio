@@ -1,0 +1,39 @@
+div {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  padding: .25rem;
+}
+
+.blue{
+  background: var(--blue-300);
+}
+
+.orange{
+  background: var(--orange-500);
+}
+
+.purple{
+  background: var(--purple-500);
+}
+
+.pink{
+  background: var(--pink-500);
+}
+
+.green{
+  background: var(--green-500);
+}
+
+.deep-green{
+  background: var(--green-800);
+}
+
+img {
+  width: 16px;
+  height: auto;
+}
+span {
+  color: var(--purple-100);
+  text-transform: uppercase;
+}
