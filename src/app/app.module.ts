@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ClockComponent } from './components/header/clock/clock.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import '@angular/common/locales/global/pt';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ {provide: LOCALE_ID, useValue: "pt"} ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
