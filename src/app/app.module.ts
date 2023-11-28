@@ -14,6 +14,7 @@ import { WindowComponent } from './components/window/window.component';
 import { WindowHeaderComponent } from './components/window/window-header/window-header.component';
 import { WindowBodyComponent } from './components/window/window-body/window-body.component';
 import { IconClickableComponent } from './components/window/icon-clickable/icon-clickable.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { IconClickableComponent } from './components/window/icon-clickable/icon-
     WindowComponent,
     WindowHeaderComponent,
     WindowBodyComponent,
-    IconClickableComponent
+    IconClickableComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
