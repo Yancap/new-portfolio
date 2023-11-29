@@ -9,6 +9,7 @@
   padding: .5rem;
 }
 
+
 article {
   p, h3 {
     color: var(--green-600);
@@ -27,4 +28,9 @@ article {
   img {
     height: 2rem;
   }
+}
+
+hr {
+  border-color: var(--green-600);
+  border-style: dashed;
 }
