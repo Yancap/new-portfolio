@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class IconClickableComponent {
   @Input() text!: string;
   @Input() icon!: string;
+  @Input() type: "clickable" | "only-view" = "clickable";
 }

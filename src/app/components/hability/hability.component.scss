@@ -6,3 +6,9 @@ p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
+
+.container-windows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
