@@ -1,3 +1,7 @@
+.container {
+  padding: 2.5rem 0;
+}
+
 .pagination{
   width: 100%;
   padding: 2rem 0;
@@ -6,4 +10,8 @@
   justify-content: center;
 
   gap: 3rem;
+}
+
+window-project {
+  flex-grow: 1;
 }

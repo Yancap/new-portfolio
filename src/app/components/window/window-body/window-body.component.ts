@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class WindowBodyComponent {
   @Input() color!: "dark" | "light" | "gray";
+  @Input() style!: string | null;
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from 'src/app/models/Project';
 
 @Component({
   selector: 'window-project',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./window-project.component.scss']
 })
 export class WindowProjectComponent {
-  public project: any;
+  @Input() public project!: Project;
 }

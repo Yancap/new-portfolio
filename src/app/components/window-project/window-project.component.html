@@ -1,28 +1,24 @@
 <window [aside]="true">
-  <window-header title="PROJETO DE FRONTEND X" color="deep-green" />
-  <window-body style="padding: 0;">
+  <window-header [title]="project.title" color="deep-green" />
+  <window-body style="padding: 0rem; height: 8rem; max-width: 10rem;">
     <picture>
-      <img src="/assets/mock.png" alt="" srcset="">
+      <img [src]="project.image.url" [alt]="project.title" srcset="">
     </picture>
   </window-body>
   <window-aside>
     <article>
       <p>
-        Fala resumidamente sobre o que sou e sobre meu trabalho com no maximo 4
-        linhas. Lorem Ipsum dolor sit amet. Nunc congue, metus in imperdiet
-        molestie, ligula est iaculis nulla, non accumsan erat turpis nec elit.
+        {{project.text}}
       </p>
       <div class="container-icons">
-        <img src="/assets/icons/angular.png" alt="">
-        <img src="/assets/icons/java.png" alt="">
-        <img src="/assets/icons/sass.png" alt="">
+        <img *ngFor="let tech of project.techs" src="/assets/icons/{{tech.tech}}.png" alt="{{tech.tech}}">
       </div>
     </article>
     <div class="container-buttons">
-      <a class="btn">
+      <a class="btn" *ngIf="project.src" [href]="project.src"  target="_blank">
         ACESSAR
       </a>
-      <a class="btn">
+      <a class="btn" *ngIf="project.github" [href]="project.github" target="_blank">
         GITHUB
       </a>
     </div>

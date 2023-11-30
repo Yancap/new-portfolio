@@ -1,28 +1,31 @@
-<section class="container" id="habilidades">
+<section class="container" id="projetos">
   <div class="title-section">
     <h2>Meus Projetos</h2>
     <img src="/assets/gifs/computer.gif" alt="" srcset="">
   </div>
-  <div class="container-windows">
-    <window>
-      <window-header title="Projetos" color="green"/>
-      <window-body color="gray">
-        <window-project />
-      </window-body>
-      <window-footer>
-        <div class="pagination">
-          <button class="btn">
+
+  <window>
+    <window-header title="Projetos" color="green"/>
+    <window-body color="gray">
+      <window-project *ngFor="let project of currentProjects" [project]="project"/>
+    </window-body>
+    <window-footer>
+      <div class="pagination">
+        <div>
+          <button class="btn" *ngIf="currentPage > 1" (click)="onPrevPage()">
             <img src="/assets/common/arrow-l.svg" alt="" srcset="">
           </button>
-          <span>
-            1 ... 20
-          </span>
-          <button class="btn">
+        </div>
+        <span>
+          {{currentPage}} ... {{maxPage}}
+        </span>
+        <div>
+          <button class="btn" *ngIf="currentPage < maxPage" (click)="onNextPage()">
             <img src="/assets/common/arrow-r.svg" alt="" srcset="">
           </button>
         </div>
-      </window-footer>
-    </window>
-  </div>
+      </div>
+    </window-footer>
+  </window>
 
 </section>

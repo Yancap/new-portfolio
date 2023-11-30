@@ -7,8 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class WindowComponent {
   @Input() public aside = false;
-  constructor() {
-    console.log(this.aside);
-
-  }
+  constructor() {}
 }

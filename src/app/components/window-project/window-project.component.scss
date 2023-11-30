@@ -1,4 +1,6 @@
+
 picture {
+  border: .15rem solid white;
   height: 8rem;
   max-width: 10rem;
   overflow: hidden;
@@ -27,6 +29,10 @@ article {
   p {
     font-size: 1.2rem;
     margin-bottom: .5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 }
 

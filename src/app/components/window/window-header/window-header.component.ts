@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./window-header.component.scss']
 })
 export class WindowHeaderComponent {
-  @Input() title!: string;
+  @Input() title!: string | null;
   @Input() color!: "blue" | "orange" | "purple" | "pink" | "green" | "deep-green";
   @Input() icon!: "globe" | "prompt" ;
 }
