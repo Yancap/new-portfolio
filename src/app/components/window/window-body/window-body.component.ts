@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./window-body.component.scss']
 })
 export class WindowBodyComponent {
-  @Input() color!: "dark" | "white";
+  @Input() color!: "dark" | "light" | "gray";
 }

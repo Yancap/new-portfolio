@@ -1,4 +1,4 @@
-import { NgModule, LOCALE_ID} from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import '@angular/common/locales/global/pt';
 
@@ -15,8 +15,10 @@ import { WindowHeaderComponent } from './components/window/window-header/window-
 import { WindowBodyComponent } from './components/window/window-body/window-body.component';
 import { IconClickableComponent } from './components/window/icon-clickable/icon-clickable.component';
 import { ExperienceComponent } from './components/experience/experience.component';
-import { HabilityComponent } from './components/hability/hability.component';
+import { AbilityComponent } from './components/ability/ability.component';
 import { ProjectComponent } from './components/project/project.component';
+import { WindowFooterComponent } from './components/window/window-footer/window-footer.component';
+import { WindowAsideComponent } from './components/window/window-aside/window-aside.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +34,13 @@ import { ProjectComponent } from './components/project/project.component';
     WindowBodyComponent,
     IconClickableComponent,
     ExperienceComponent,
-    HabilityComponent,
-    ProjectComponent
+    AbilityComponent,
+    ProjectComponent,
+    WindowFooterComponent,
+    WindowAsideComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [ {provide: LOCALE_ID, useValue: "pt"} ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

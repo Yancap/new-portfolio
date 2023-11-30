@@ -30,6 +30,7 @@ $font-family: 'VT323', 'Montserrat', Helvetica, sans-serif;
   --purple-100: #F7F6FF;
   --purple-200: #D5D4FE;
   --purple-500: #8889FC;
+  --purple-700: #6D5CD8;
 
   --orange-500: #FC9288;
   --pink-500: #FC88AB;
@@ -117,6 +118,9 @@ body {
 }
 
 
+.emphasis {
+  color: var(--purple-700);
+}
 
 li {
   list-style: none;

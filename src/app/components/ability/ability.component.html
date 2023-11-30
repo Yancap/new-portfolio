@@ -3,28 +3,29 @@
     <h2>Minhas Habilidades</h2>
     <img src="/assets/gifs/coffee.gif" alt="" srcset="">
   </div>
-  <p>
-    Fala resumidamente sobre o que sou e sobre meu trabalho com no maximo 4 linhas.
-    Lorem Ipsum dolor sit amet. Nunc congue, metus in imperdiet molestie, ligula est iaculis
-    nulla, non accumsan erat turpis nec elit.
-  </p>
   <div class="container-windows">
     <window>
       <window-header title="Minhas Habilidades - Avançadas" color="purple" icon="prompt"/>
       <window-body>
-        <icon-clickable text="Angular" icon="angular.png" type="only-view"/>
+        <icon-clickable *ngFor="let hability of advanced"
+          [text]="hability.text" icon="{{hability.tech}}.png" type="only-view"
+        />
       </window-body>
     </window>
     <window>
       <window-header title="Minhas Habilidades - Intermediárias" color="orange" icon="prompt"/>
       <window-body>
-        <icon-clickable text="Angular" icon="angular.png" type="only-view"/>
+        <icon-clickable *ngFor="let hability of intermediary"
+          [text]="hability.text" icon="{{hability.tech}}.png" type="only-view"
+        />
       </window-body>
     </window>
     <window>
       <window-header title="Minhas Habilidades - Básicas" color="pink" icon="prompt"/>
       <window-body>
-        <icon-clickable text="Angular" icon="angular.png" type="only-view"/>
+        <icon-clickable *ngFor="let hability of basic"
+          [text]="hability.text" icon="{{hability.tech}}.png" type="only-view"
+        />
       </window-body>
     </window>
   </div>

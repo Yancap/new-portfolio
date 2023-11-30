@@ -6,16 +6,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements DoCheck{
+export class AppComponent {
   actualRoute!: string;
 
   constructor(
-    private router: Router
-  ){}
+    public router: Router
+  ){ }
 
-  ngDoCheck() {
-    this.actualRoute = this.router.url
-    console.log(this.actualRoute);
-
-  }
 }
