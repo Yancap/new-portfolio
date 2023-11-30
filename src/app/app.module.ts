@@ -19,6 +19,7 @@ import { AbilityComponent } from './components/ability/ability.component';
 import { ProjectComponent } from './components/project/project.component';
 import { WindowFooterComponent } from './components/window/window-footer/window-footer.component';
 import { WindowAsideComponent } from './components/window/window-aside/window-aside.component';
+import { WindowProjectComponent } from './components/window-project/window-project.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { WindowAsideComponent } from './components/window/window-aside/window-as
     ProjectComponent,
     WindowFooterComponent,
     WindowAsideComponent,
+    WindowProjectComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }],

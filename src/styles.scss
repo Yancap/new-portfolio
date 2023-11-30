@@ -67,7 +67,9 @@ body {
 }
 
 
-
+window-body {
+  flex-grow: 1;
+}
 
 .container {
   margin: 0 auto;
@@ -91,10 +93,10 @@ body {
   text-transform: uppercase;
 
   border-radius: .25rem;
-  border-bottom: 1px solid var(--gray-800);
-  border-right: 1px solid var(--gray-800);
-  border-top: 1px solid var(--gray-300);
-  border-left: 1px solid var(--gray-300);
+  border-bottom: 1.5px solid var(--gray-800);
+  border-right: 1.5px solid var(--gray-800);
+  border-top: 1.5px solid var(--gray-300);
+  border-left: 1.5px solid var(--gray-300);
 
   transition: .25s;
   &:hover{

@@ -1,0 +1,50 @@
+picture {
+  height: 8rem;
+  max-width: 10rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+window-body .content {
+  padding: 0 !important;
+}
+
+window-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+article {
+  p {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+  }
+}
+
+.container-icons {
+  display: flex;
+  gap: .5rem;
+
+  img {
+    height: 24px;
+  }
+}
+
+.container-buttons {
+  display: flex;
+  gap: .5rem;
+
+  .btn {
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+  }
+}

@@ -1,6 +1,7 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { PrismicService } from 'src/app/services/prismic.service';
 import { RichText } from 'prismic-dom'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'presentation',
@@ -8,23 +9,19 @@ import { RichText } from 'prismic-dom'
   styleUrls: ['./presentation.component.scss'],
   providers: [PrismicService]
 })
-export class PresentationComponent {
+export class PresentationComponent implements AfterViewInit{
 
   @ViewChild("aboutMe") elementDiv!: ElementRef<HTMLDivElement>;
 
-  constructor(private service: PrismicService) {
-    this.getInfoAboutMe();
+  constructor(private service: PrismicService, private route: ActivatedRoute) {}
+
+  ngAfterViewInit(){
+    const aboutMe = this.route.snapshot.data["aboutMe"]
+    console.log(aboutMe);
+    this.elementDiv.nativeElement.innerHTML = aboutMe
   }
 
-  async getInfoAboutMe() {
-    const response = await this.service.prismic.getAllByType("about", { fetch: [], pageSize: 50 })
-    const [about] = response.map((resp) => {
-      return {
-        text: RichText.asHtml(resp.data['text'])
-          .replace(/<strong>/g, "<strong class='emphasis'>")
-      }
-    })
-    this.elementDiv.nativeElement.innerHTML = about.text
-    console.log(about);
+  async getInfoAboutMe(aboutMe: string) {
+    this.elementDiv.nativeElement.innerHTML = aboutMe
   }
 }
