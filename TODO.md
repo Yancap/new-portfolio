@@ -1,1 +1,1 @@
-Arrumar os icones dos projetos
+Criar o gerenciador de experiencia
