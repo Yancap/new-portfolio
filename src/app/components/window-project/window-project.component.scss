@@ -1,5 +1,9 @@
 window-body {
-  max-width: 100%;
+  @media screen and (min-width: 480px) {
+    height: 8rem;
+    max-width: 10rem;
+  }
+
 }
 
 picture {
