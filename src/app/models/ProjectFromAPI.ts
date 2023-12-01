@@ -7,6 +7,6 @@ export interface ProjectFromAPI {
   src: { url: string };
   github: { url: string };
   type: string;
-  order: number;
+  created_at: number;
 }
 

@@ -33,11 +33,11 @@ export class ProjectComponent {
         src: content.src.url || null,
         github: content.github.url || null,
         type: content.type,
-        order: content.order
+        created_at: content.created_at
       }
     })
     this.projects = projects.filter(project => project.type === 'personal')
-      .sort((project, p) => (project.order && p.order ? (project.order - p.order) : 0))
+      .sort((project, p) => (project.created_at && p.created_at ? p.created_at - project.created_at  : 0))
 
     this.maxPage = Math.ceil(this.projects.length / 3)
     this.currentProjects = this.projects.slice(this.currentPage - 1, this.currentPage * 3)

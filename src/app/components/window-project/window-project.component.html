@@ -11,7 +11,7 @@
         {{project.text}}
       </p>
       <div class="container-icons">
-        <img *ngFor="let tech of project.techs" src="/assets/icons/{{tech.tech}}.png" alt="{{tech.tech}}">
+        <img *ngFor="let tech of project.techs" src="/assets/icons/{{tech.image}}.png" alt="{{tech.tech}}">
       </div>
     </article>
     <div class="container-buttons">
@@ -21,6 +21,7 @@
       <a class="btn" *ngIf="project.github" [href]="project.github" target="_blank">
         GITHUB
       </a>
+      
     </div>
   </window-aside>
 </window>
