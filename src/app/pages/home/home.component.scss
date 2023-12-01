@@ -46,6 +46,11 @@ button {
     height: 100%;
     width: auto;
   }
+
+  @media screen and (max-width: 560px) {
+
+    display: none;
+  }
 }
 
 .title-welcome {

@@ -1,3 +1,6 @@
+window-body {
+  max-width: 100%;
+}
 
 picture {
   border: .15rem solid white;
@@ -7,6 +10,16 @@ picture {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
 }
 
 img {
@@ -33,13 +46,16 @@ article {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    @media screen and (max-width: 480px) {
+      -webkit-line-clamp: 5;
+    }
   }
 }
 
 .container-icons {
   display: flex;
   gap: .5rem;
-
+  flex-wrap: wrap;
   img {
     height: 24px;
   }

@@ -1,5 +1,6 @@
 .container {
-  padding: 5rem 0 2.5rem 0;
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
 }
 
 .container-job {
@@ -33,4 +34,17 @@ article {
 hr {
   border-color: var(--green-600);
   border-style: dashed;
+}
+
+.company-logo {
+  img {
+    width: 20rem;
+    height: auto;
+  }
+  @media screen and (max-width: 400px) {
+    img {
+      width: 16rem;
+    }
+
+  }
 }

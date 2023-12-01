@@ -14,3 +14,13 @@
 .gray {
   background: var(--gray-300);
 }
+
+.responsive {
+  max-width: max-content;
+  height: max-content;
+  padding: 0;
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
