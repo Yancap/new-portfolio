@@ -41,8 +41,6 @@ export class ProjectComponent {
 
     this.maxPage = Math.ceil(this.projects.length / 3)
     this.currentProjects = this.projects.slice(this.currentPage - 1, this.currentPage * 3)
-    console.log(this.projects);
-
   }
 
   onPrevPage() {

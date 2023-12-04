@@ -1,1 +1,1 @@
-Criar o gerenciador de experiencia
+Adicionar o intervalo de tempo que fiquei no emprego

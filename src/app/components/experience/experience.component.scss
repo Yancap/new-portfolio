@@ -7,8 +7,12 @@
   flex-direction: column;
   gap: 1rem;
   padding: .5rem;
-}
 
+}
+window-body {
+  max-height: 30rem;
+  overflow: auto;
+}
 
 article {
   p, h3 {

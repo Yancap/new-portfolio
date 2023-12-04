@@ -17,7 +17,6 @@ export class PresentationComponent implements AfterViewInit{
 
   ngAfterViewInit(){
     const aboutMe = this.route.snapshot.data["aboutMe"]
-    console.log(aboutMe);
     this.elementDiv.nativeElement.innerHTML = aboutMe
   }
 
