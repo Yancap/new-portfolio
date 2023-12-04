@@ -4,6 +4,8 @@ nav {
   background: var(--gray-500);
   padding: .35rem 0;
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
 }
 
 ul {

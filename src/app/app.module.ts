@@ -20,6 +20,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { WindowFooterComponent } from './components/window/window-footer/window-footer.component';
 import { WindowAsideComponent } from './components/window/window-aside/window-aside.component';
 import { WindowProjectComponent } from './components/window-project/window-project.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { WindowProjectComponent } from './components/window-project/window-proje
     WindowAsideComponent,
     WindowProjectComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent],
 })

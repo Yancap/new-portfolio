@@ -1,5 +1,5 @@
 <div [class]="color">
-  <img [src]="'/assets/window/' + icon + '.svg'" alt="" srcset="">
+  <img  *ngIf="icon" [src]="'/assets/window/' + icon + '.svg'" alt="" srcset="">
   <span>
     {{title}}
   </span>
