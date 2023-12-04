@@ -1,1 +1,1 @@
-Adicionar o intervalo de tempo que fiquei no emprego
+Estudar Canvas para realizar animações gráficas
