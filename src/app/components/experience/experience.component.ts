@@ -38,6 +38,8 @@ export class ExperienceComponent {
           employ: data.employ,
           description: data.description,
           techs: data.techs,
+          start_date: data.start_date,
+          end_date: data.end_date,
         },
       ];
 

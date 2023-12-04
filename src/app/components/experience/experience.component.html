@@ -14,6 +14,7 @@
           <h3>
             {{job.employ}} • {{ exp.company }}
           </h3>
+          <time>{{job.start_date | date: 'MMMM y'}} - {{ job.end_date ? (job.end_date | date: 'MMMM y') : "Atualmente"}}</time>
           <p>
             {{job.description}}
           </p>

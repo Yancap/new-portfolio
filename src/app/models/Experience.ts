@@ -3,6 +3,6 @@ export interface Experience {
   employ: string;
   description: string;
   techs: { text: string; image: string }[];
-  end_date: string;
-  start: string;
+  start_date: string;
+  end_date: string | null;
 }
