@@ -6,10 +6,11 @@
   <window>
     <window-header title="Minhas experiencias" color="deep-green" icon="prompt"/>
     <window-body color="dark">
+
       <div class="container-job" *ngFor="let exp of experience">
-        <picture>
-          <img src="/assets/company/{{exp.company.toLowerCase()}}.png" alt="" srcset="">
-        </picture>
+        <div style="display: flex;">
+          <pre *ngFor="let txt of getAsciiArtText(exp.company)">{{txt}}</pre>
+        </div>
         <article *ngFor="let job of exp.jobs">
           <h3>
             {{job.employ}} • {{ exp.company }}

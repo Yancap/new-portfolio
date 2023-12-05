@@ -14,7 +14,9 @@ window-body {
   max-height: 30rem;
   overflow: auto;
 }
-
+pre {
+  color: var(--green-600);
+}
 article {
   p, h3 {
     color: var(--green-600);

@@ -1,3 +1,4 @@
+import { AsciiArtTextService } from './../../services/animations/ascii-art-text.service';
 import { Component } from '@angular/core';
 import { Experience } from 'src/app/models/Experience';
 import { ExperienceDataFomatter } from 'src/app/models/ExperienceDataFomatter';
@@ -10,12 +11,17 @@ import { PrismicService } from 'src/app/services/prismic.service';
 })
 export class ExperienceComponent {
   public experience!: ExperienceDataFomatter[];
-  constructor(private service: PrismicService) {
+  public textAscii: string[] = [];
+  constructor(
+    private prismicService: PrismicService,
+    private asciiArtTextService: AsciiArtTextService
+  ) {
     this.getExperience();
+
   }
 
   async getExperience() {
-    const response = await this.service.prismic.getAllByType('experience', {
+    const response = await this.prismicService.prismic.getAllByType('experience', {
       fetch: [],
       pageSize: 50,
     });
@@ -56,5 +62,8 @@ export class ExperienceComponent {
     });
 
     this.experience = dataAggregator;
+  }
+  getAsciiArtText(text: string) {
+    return this.asciiArtTextService.getAsciiArtText(text)
   }
 }
