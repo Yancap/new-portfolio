@@ -6,9 +6,10 @@
   <window>
     <window-header title="Minhas experiencias" color="deep-green" icon="prompt"/>
     <window-body color="dark">
-
+      <canvas #window></canvas>
       <div class="container-job" *ngFor="let exp of experience">
-        <div style="display: flex;">
+
+        <div class="ascii-container" style="display: flex;">
           <pre *ngFor="let txt of getAsciiArtText(exp.company)">{{txt}}</pre>
         </div>
         <article *ngFor="let job of exp.jobs">

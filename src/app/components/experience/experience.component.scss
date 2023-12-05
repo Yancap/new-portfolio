@@ -13,10 +13,10 @@
 window-body {
   max-height: 30rem;
   overflow: auto;
+
+  position: relative;
 }
-pre {
-  color: var(--green-600);
-}
+
 article {
   p, h3 {
     color: var(--green-600);
@@ -36,6 +36,26 @@ article {
   }
 }
 
+.ascii-container {
+
+  gap: 3px;
+  pre {
+    color: var(--green-600);
+    font-size: .75rem;
+  }
+  @media screen and (max-width: 764px) {
+    pre {
+      font-size: .5rem;
+    }
+
+  }
+  @media screen and (max-width: 350px) {
+    pre {
+      font-size: .4rem;
+    }
+
+  }
+}
 .container-icons {
   padding: .5rem 0;
   display: flex;
@@ -62,4 +82,14 @@ hr {
     }
 
   }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gray-700);
+  color: var(--green-600);
+  height: 100%;
+  width: 100%;
 }

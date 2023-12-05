@@ -11,7 +11,6 @@ export class AsciiArtTextService {
   public getAsciiArtText(text: string) {
     const charArray = text.toUpperCase().split("")
     const textAsciiArtArray = [];
-    console.log(charArray);
 
     for (const char of charArray) {
       textAsciiArtArray.push(this.asciiArtDict[char])

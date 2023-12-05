@@ -1,8 +1,9 @@
-import { AsciiArtTextService } from './../../services/animations/ascii-art-text.service';
-import { Component } from '@angular/core';
+import { AsciiArtTextService } from './../../services/animations/ascii-art-text/ascii-art-text.service';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Experience } from 'src/app/models/Experience';
 import { ExperienceDataFomatter } from 'src/app/models/ExperienceDataFomatter';
 import { PrismicService } from 'src/app/services/prismic.service';
+import { WindowPromptAnimationService } from 'src/app/services/animations/window-prompt-animation/window-prompt-animation.service';
 
 @Component({
   selector: 'experience',
@@ -11,13 +12,13 @@ import { PrismicService } from 'src/app/services/prismic.service';
 })
 export class ExperienceComponent {
   public experience!: ExperienceDataFomatter[];
-  public textAscii: string[] = [];
+  @ViewChild("window") canvas!: ElementRef<HTMLCanvasElement>;
   constructor(
     private prismicService: PrismicService,
-    private asciiArtTextService: AsciiArtTextService
+    private asciiArtTextService: AsciiArtTextService,
+    private animateService: WindowPromptAnimationService
   ) {
     this.getExperience();
-
   }
 
   async getExperience() {
@@ -25,7 +26,6 @@ export class ExperienceComponent {
       fetch: [],
       pageSize: 50,
     });
-    console.log(response);
 
     const dataOrdened = response.sort((current: {data: any}, next: {data: any},) =>
      new Date(current.data.end_date).getTime() -
@@ -62,8 +62,14 @@ export class ExperienceComponent {
     });
 
     this.experience = dataAggregator;
+    this.initAnimate()
   }
-  getAsciiArtText(text: string) {
+
+  public getAsciiArtText(text: string) {
     return this.asciiArtTextService.getAsciiArtText(text)
+  }
+
+  public initAnimate() {
+    this.animateService.animate(this.canvas.nativeElement)
   }
 }
